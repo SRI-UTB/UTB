@@ -190,10 +190,39 @@
             text-align: center;
         }
         
-        .about-image img {
+        /* slideshow */        
+        .slideshow-container {
+            position: relative;
             max-width: 100%;
             border-radius: 8px;
+            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slideshow-slide {
+            display: none;
+            width: 100%;
+        }
+        
+        .slideshow-slide img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+        
+        .slideshow-slide.active {
+            display: block;
+        }
+        
+        /* Fade animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+            from {opacity: 0.4}
+            to {opacity: 1}
         }
         
         /* Services Section */
@@ -690,7 +719,14 @@
                     <p>As the lab has now completed BSP's original aims, we are planning to broaden access to our ongoing research. The lessons we have learned in Brunei are applicable in many other locations. We regularly present at SPE conferences and workshops, but we recognise that some operators, service companies and screen manufacturers are not just interested in seeing results, but would like to actively join us in the research process.</p>
                 </div>
                 <div class="about-image">
-                    <img src="images/Facility3.png" alt="UTB Sand Screen Lab Facility">
+                    <div class="slideshow-container">
+                        <div class="slideshow-slide fade">
+                            <img src="images/Facility3.png" alt="UTB Facility 1">
+                        </div>
+                        <div class="slideshow-slide fade">
+                            <img src="images/simulation.png" alt="UTB Facility 2">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -907,5 +943,27 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slideshow-slide');
+            let currentSlide = 0;
+            
+            // Show first slide initially
+            if (slides.length > 0) {
+                slides[0].style.display = 'block';
+            }
+            
+            // Function to move to next slide
+            function nextSlide() {
+                slides[currentSlide].style.display = 'none';
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].style.display = 'block';
+                slides[currentSlide].className = 'slideshow-slide fade';
+            }
+            
+            // Change slide every 4 seconds
+            setInterval(nextSlide, 4000);
+        });
+    </script>
 </body>
 </html>
