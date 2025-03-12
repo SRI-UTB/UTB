@@ -18,6 +18,9 @@
         body {
             font-family: 'Montserrat', sans-serif;
         }
+        html {
+            scroll-padding-top: 80px; /* Adjust this value based on your header height */
+        }
         
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
@@ -526,6 +529,9 @@
         }
         
         @media screen and (max-width: 768px) {
+            html {
+                scroll-padding-top: 60px; /* Smaller value for mobile */
+            }
             header {
                 padding: 8px 0;  /* Reduced from 20px */
             }
