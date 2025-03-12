@@ -525,7 +525,13 @@
             }
         }
         
-        @media screen and (max-width: 768px) {    
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 8px 0;  /* Reduced from 20px */
+            }
+            .logo img {
+                height: 30px; /* Reduced from 40px */
+            }
             .header-container {
                 flex-direction: column;
                 align-items: center;
@@ -544,7 +550,7 @@
             }
             
             nav ul li {
-                margin: 5px 10px;
+                margin: 0px 5px;
             }
             
             .hero h1 {
@@ -574,6 +580,12 @@
         }
         
         @media screen and (max-width: 480px) {
+            header {
+                padding: 5px 0;  /* Reduced from 20px */
+            }
+            .logo img {
+                height: 25px; /* Reduced from 40px */
+            }
             body {
                 font-size: 0.9rem;
             }
