@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,14 +45,19 @@
             padding: 0 20px;
         }
         
+        .logo img {
+            height: 40px; /* Allow height to adjust proportionally */
+            width: auto; /* Set a reasonable default width */            }
+
         a {
-            text-decoration: none;
-            color: #5c5c5c;
-        }
-        
-        a:hover {
-            color: #333;
-        }
+    text-decoration: none;
+    color: white; /* White text for all hyperlinks */
+    font-weight: 500;
+}
+
+a:hover {
+    color: #f2c94c; /* Golden yellow for better contrast on hover */
+}
         
         .btn {
             display: inline-block;
@@ -673,7 +679,7 @@
                 padding: 5px 0;  /* Reduced from 20px */
             }
             .logo img {
-                height: 25px; /* Reduced from 40px */
+                height: 30px; /* Reduced from 40px */
             }
             body {
                 font-size: 0.9rem;
@@ -728,7 +734,11 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="images/utblogojawi.png" alt="UTB Logo" style="height: 60px; width: auto;">
+                <!-- <img src="images/utblogojawi.png" alt="UTB Logo" style="height: 60px; width: auto;"> -->
+                <a href="https://www.utb.edu.bn" target="_blank" rel="noopener noreferrer">
+                    <!-- <img src="images/UTB-Logo-new-Jawi-1024x156.png" alt="UTB Logo" style="height: 60px; width: auto;"> -->
+                    <img src="images/UTB-Logo-new-Jawi-1024x156.png" alt="UTB Logo">
+                </a>
             </div>
             <nav>
                 <ul>
@@ -976,11 +986,11 @@
                 <div class="contact-info" style="max-width: 500px;">
                     <h3 style="text-align: center;">Contact Information</h3>
                     <p><i>📍</i> Universiti Teknologi Brunei, Jalan Tungku Link, Gadong BE1410, Brunei Darussalam</p>
-                    <p><i>📞</i> (+673) 2461020/1/2/3</p>
-                    <p><i>📠</i> (+673) 246 1035/6</p>
-                    <p><i>📧</i> srilab@utb.edu.bn</p>
-                    <p><i>👨‍💼</i> For administrative inquiries: avceiroffice@utb.edu.bn</p>
-                </div>
+                    <p><i>📞</i> <a href="tel:+6732461020">(+673) 2461020/1/2/3</a></p>
+                    <p><i>📠</i> <a href="tel:+6732461035">(+673) 246 1035/6</a></p>
+                    <p><i>📧</i> <a href="mailto:srilab@utb.edu.bn">srilab@utb.edu.bn</a></p>
+                    <p><i>👨‍💼</i> For administrative inquiries: <a href="mailto:avceiroffice@utb.edu.bn">avceiroffice@utb.edu.bn</a></p>
+                </div>                
             </div>
         </div>
     </section>
