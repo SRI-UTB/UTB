@@ -393,23 +393,22 @@ a:hover {
         .subscription-features {
             list-style: none;
             margin-bottom: 25px;
-            padding: 0;
             text-align: center;
         }
         
         .subscription-features li {
             margin-bottom: 10px;
-            position: relative;
-            padding-left: 25px;
-            display: inline-block;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         .subscription-features li:before {
             content: "✓";
             color: #f2c94c;
-            position: absolute;
-            left: 0;
+            display: inline-block;
+            margin-right: 8px;
+            font-weight: bold;
         }
         
         /* Facilities Section */
