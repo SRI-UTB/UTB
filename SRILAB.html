@@ -393,14 +393,16 @@ a:hover {
         .subscription-features {
             list-style: none;
             margin-bottom: 25px;
+            padding: 0;
+            text-align: center;
         }
         
         .subscription-features li {
             margin-bottom: 10px;
-            padding-left: 20px;
             position: relative;
-            text-align: center;
-            list-style-position: inside;
+            padding-left: 25px;
+            display: inline-block;
+            text-align: left;
         }
         
         .subscription-features li:before {
@@ -408,9 +410,6 @@ a:hover {
             color: #f2c94c;
             position: absolute;
             left: 0;
-            display: inline-block;
-            width: 20px;
-            text-align: center;
         }
         
         /* Facilities Section */
@@ -934,6 +933,7 @@ a:hover {
             <h2 class="section-title">Join Our Research Community</h2>
             <p class="section-subtitle">We offer subscription options for operators, service companies, and screen manufacturers. Contact us to learn more about our subscription models and how they can benefit your organization.</p>
             
+            <div class="subscription-grid">
                 <div class="subscription-card premier">
                     <h3>Premier Subscription</h3>
                     <div class="price">Premier Subscription<span></span></div>
