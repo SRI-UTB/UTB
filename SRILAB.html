@@ -386,6 +386,21 @@
         .slideshow-slide.active {
             display: block;
         }
+
+        /* Fixed size for slideshow images */
+        .slideshow-slide {
+            height: 350px; /* Fixed height for all slides */
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .slideshow-slide img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            display: block;
+            object-fit: cover; /* This crops/scales the image to fill the container while maintaining aspect ratio */
+        }
         
         /* Fade animation */
         .fade {
